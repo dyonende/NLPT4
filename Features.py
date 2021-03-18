@@ -52,10 +52,13 @@ def list_dict_to_conll(list_of_dicts, filepath):
             
 
 def main():
-    nltk.download('averaged_perceptron_tagger')
+    
     args = sys.argv
     infile = args[1]
     outfile = args[2]
+    
+    #download required package
+    nltk.download('averaged_perceptron_tagger')
     
     feature_list = list_of_features(infile)
     list_dict_to_conll(feature_list, outfile) 
